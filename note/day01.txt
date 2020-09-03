@@ -1,0 +1,69 @@
+1.1 项目整体背景
+    三大模块:
+        数据仓库系统
+            数据的管理和运算中心
+            数据存档
+            各种统计,运算任务的核心平台
+        用户画像系统
+            给用户打各种标签,用于精细化营运
+        推荐系统
+            个性化推荐
+            不同的人,不同的场景,推荐不同的物品
+            用户之间的关联,物品之间的关联,精准推荐
+    计算方式
+        离线处理(Hive MR ...)
+        实时处理(Spark Streaming Flink ...)
+
+1.2 项目整体架构
+    前端数据源       日志系统数据(PC, Mobile)                  业务系统数据
+    数据采集汇聚      Flume(日志数据 离线 HDFS 实时 Kafka)       Sqoop(数据库数据)
+    数据预处理       ETL(Extract-Transform-Load) ... (数据清洗,JSON解析,数据集成,信息回补,GUID生成 ...)
+    数据仓库ODS     数据引入层       (Operational Data Store)
+    数据仓库DWD     明细数据层       (Data Warehouse Detail)
+        DWS         数据汇总层       (Data Warehouse Summary)
+        DWT         数据主题层       (Data Warehouse Topic)
+    数据仓库ADS     数据应用层       (Application Data Store)
+    数据访问层       Spoop   MySQL   Presto  ...
+    应用层         推荐系统    广告投放    数据运营分析  数据运营分析
+
+    任务调度系统      Azkaban (Azkaban - A batch workflow job scheduler created at LinkedIn to run Hadoop jobs.)
+    元数据管理系统     Atlas (Apache Atlas – Data Governance and Metadata framework for Hadoop)
+
+    资料
+        https://help.aliyun.com/document_detail/126409.html?spm=a2c4g.11186623.6.585.1182424dhjNxDw
+
+1.3 运营分析平台OLAP展示(神策分析)
+    https://www.sensorsdata.cn/
+1.4 技术架构
+    数据采集        flume   sqoop   cannal  nginx
+    存储          hdfs    mysql   redis   hbase   elasticsearch   kafka
+    计算          hive/mapreduce  spark   flink
+    OLAP        Presto  Kylin   Druid
+    元数据管理   Atlas
+    任务调度系统  Azkaban
+    算法          通过统计算法  图计算算法   机器学习算法
+
+2.1 日志数据(行为数据)
+    App/Web埋点日志 flume
+        前端埋点
+        后端埋点
+2.2 业务数据
+    业务系统数据 一般存储在关系型数据库中 spark-sql   sqoop
+
+3.1 数据仓库系统
+    Data Warehouse:
+        Subject Oriented
+        Integrate
+        Non-Volatile
+        Time Variant
+
+3.2 数据库 vs 数据仓库
+    数据库
+        OLTP (Online Transaction Process)
+
+3.3 报表 vs 数据可视化 vs ETL
+
+
+
+
+

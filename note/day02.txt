@@ -1,0 +1,46 @@
+3.4 数据仓库主题
+
+3.5 事实和维度
+    Fact vs Dimension
+        事实是数据中的数字型度量
+        维度是看待事实的角度
+    Fact Table
+        Transaction Fact Tables
+            事务事实表
+        Periodic Snapshot Fact tables
+            周期快照事实表
+        Accumulated Snapshot  Fact Table
+            累加快照事实表
+
+    Dimension Table
+        通用的维度分类:
+            Conformed Dimension
+            Junk Dimension
+            Degenerated Dimension
+            Role Playing Dimension
+        按照数据变化划分:
+            Unchanging or Static Dimension (UCD)
+            Slowly Changing Dimension (SCD)
+                增加新行来保持历史信息
+                    SK      USER_ID     USER_NAME   UESR_CELLPHONE      EFFECTIVE_FROM_DATE     EFFECTIVE_TO_DATE       FLAG
+                    100         1         yaoting     13247163315           2012-09-08            2020-09-10             0
+                    101         1         yaoting     13986688416           2020-09-10            9999-12-31             1
+            Rapidly Changing Dimension (RCD)
+        资料
+            https://dwgeek.com/rapidly-changing-dimension-data-warehouse.html/
+            https://dwgeek.com/scd-type-2-sql.html/
+            https://dwgeek.com/slowly-changing-dimensions-scd.html/
+    A fact table works with dimension tables and it holds the data to be analyzed
+        and a dimension table stores data about the ways in which the data can be analyzed.
+3.6 数据仓库分层
+    ODS     Operational Data Store  操作数据层
+    DWD     Data Warehouse Detail   数仓明细层
+    DWS     Data Warehouse Summarized   数仓汇总层
+    ADS     Application Data Service    应用服务层
+3.7 数据仓库建模
+
+
+
+
+
+
