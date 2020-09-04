@@ -17,7 +17,6 @@
     </modules>
 
     <properties>
-        <scala.version>2.11</scala.version>
         <spark.version>2.4.5</spark.version>
         <fastjson.version>1.2.61</fastjson.version>
         <hadoop.version>2.7.2</hadoop.version>
@@ -26,24 +25,18 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>2.11.12</version>
-        </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_${scala.version}</artifactId>
-            <version>${spark.version}</version>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.4.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.janino</groupId>
+                    <artifactId>janino</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_${scala.version}</artifactId>
-            <version>${spark.version}</version>
-        </dependency>
-
 
 
     </dependencies>
@@ -106,12 +99,6 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <archive>
-                        <!-- 默认主类 可以在运行时 自动指定 -->
-                        <manifest>
-                            <mainClass>com.yaoting117.project.titan.App</mainClass>
-                        </manifest>
-                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>

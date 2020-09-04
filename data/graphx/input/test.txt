@@ -1,0 +1,6 @@
+13986688416,夏耀庭,wx_yaoting,2000
+13986688416,yaoting117,wx_yaoting,2000
+13886624679,夏耀庭,wx_helloworld,500
+13247163315,胡倩倩,wx_huqianqian,2000
+13247163315,青青,wx_qingqingqing,1000
+13247163315,倩倩,wx_qianqian,1000

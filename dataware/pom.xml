@@ -19,6 +19,12 @@
             <version>2.4.5</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.codehaus.janino</groupId>
+            <artifactId>janino</artifactId>
+            <version>3.0.8</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/ch.hsr/geohash -->
         <dependency>
             <groupId>ch.hsr</groupId>
@@ -32,6 +38,12 @@
             <version>5.1.47</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.yaoting117.project</groupId>
+            <artifactId>commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

@@ -2,7 +2,7 @@ package com.yaoting117.project.titan.dataware.test
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
-class ReadParquet {
+object ReadParquet {
 
     def main(args: Array[String]): Unit = {
 
