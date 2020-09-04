@@ -1,0 +1,28 @@
+第五章 Id-Mapping设计与实现
+
+Id-Mapping
+    每一条日志数据对应唯一的用户Id,使用什么作为用户唯一的Id
+    一条日志数据可能含有如下和用户唯一性相关的字段
+        UserId
+        IMEI
+        IMSI
+        MAC
+        AndroidId
+        UUID
+        ...
+
+
+使用Redis
+    Redis Set 数据结构
+    GUID    -->     UserId: "yaoting117"
+    GUID    -->     UserId: "yaoting117"
+                    IMEI: "XXXXXXXXXXXXXXXXX"
+                    IMSI: "XXXXXXXXXXXXXXXXX"
+
+使用图计算技术(Spark-GraphX)
+    图计算核心思想:
+        将数据表达成'点',点和点之间通过业务建立'边',可以从'点'和'边'获取数据的各种关系:
+            数据连通性
+            最短路径规划
+            最大连通子图
+            ......

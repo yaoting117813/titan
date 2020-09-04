@@ -13,6 +13,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-graphx_2.11</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/ch.hsr/geohash -->
         <dependency>
             <groupId>ch.hsr</groupId>
