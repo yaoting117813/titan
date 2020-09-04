@@ -1,0 +1,25 @@
+{
+  "eventid": "appClickEvent",
+  "event": {},
+  "user": {
+    "uid": "xxxx",
+    "phone": {
+      "imei": "xxxx",
+      "mac": "xxxxxx",
+      "imsi": "xxxxxx",
+      "osName": "macos"
+    },
+    "app": {
+      "appid": "xxx",
+      "appVer": "xxx"
+
+    },
+    "loc": {
+
+    },
+    "sessionid": ""
+  },
+
+  "timestamp": "xxxxx"
+
+}
