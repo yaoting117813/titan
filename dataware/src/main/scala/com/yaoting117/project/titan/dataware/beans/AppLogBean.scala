@@ -19,7 +19,6 @@ case class AppLogBean(
     appVer: String,
     release_ch: String,
     promotion_ch: String,
-    areacode: String,
     longitude: Double,
     latitude: Double,
     carrier: String,
