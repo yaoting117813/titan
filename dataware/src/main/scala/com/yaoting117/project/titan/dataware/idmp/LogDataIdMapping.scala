@@ -40,7 +40,7 @@ object LogDataIdMapping {
             eg [tag1, tag2, tag3, tag4]
                 --> (tag1,tag2) (tag1,tag3) (tag1,tag4) (tag2,tag3) (tag2,tag4) (tag3,tag4)
                 --> 对数组双重for循环
-                --> 可以使用 filter 对边进行过滤 (wordcount)
+                --> 可以使用 filter 对边进行过滤 (wordcount) 防止小概率事件,使用其它设备登录...
          */
         val edges: RDD[Edge[String]] = ids.flatMap(arr => {
             for (i <- 0 to arr.length - 2; j <- i + 1 until arr.length) yield Edge(arr(i).hashCode.toLong, arr(j).hashCode.toLong, "")

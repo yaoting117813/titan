@@ -30,6 +30,6 @@
         parquet格式 使用snappy压缩格式
 6.2 app埋点日志预处理--代码实现
 
-6.3 app埋点日志预处理--代码优化
-
-6.4 预处理程序打包部署到集群
+6.3 预处理程序打包部署到集群
+    Maven打包插件
+        maven-assembly-plugin
